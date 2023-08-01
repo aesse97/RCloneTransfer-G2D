@@ -1,0 +1,25 @@
+<html>
+<style>
+    a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+    </style>
+<head>
+    <title>User Login</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ login_form.as_p }}
+        <button type="submit">Log In</button>
+    </form>
+    <a href="{% url 'register' %}" class="button">Register</a>
+</body>
+</html>

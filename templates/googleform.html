@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Create a new transfer request</h1>
+{% block content %}
+  {% if user.is_authenticated %}
+    <form action="{% url 'google-login' %}" method="GET">
+      {% csrf_token %}
+      <button type="submit">Authenticate Google Account</button>
+    </form>
+{% endif %}
+{% endblock %}
+</body>
+</html>

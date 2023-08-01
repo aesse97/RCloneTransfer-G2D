@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Now Dropbox</h1>
+{% block content %}
+  {% if user.is_authenticated %}
+    <form action="{% url 'dropbox-login' %}" method="GET">
+      {% csrf_token %}
+      <button type="submit">Authenticate Dropbox Account</button>
+    </form>
+{% endif %}
+{% endblock %}
+</body>
+</html>

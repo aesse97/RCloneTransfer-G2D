@@ -1,0 +1,6 @@
+<form action="{% url 'rclone_job_view' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="source" value="gdrive:">
+    <input type="hidden" name="destination" value="dropbox:">
+    <button type="submit">Start Rclone Job</button>
+</form>
